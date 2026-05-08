@@ -1,52 +1,47 @@
 <div align="center">
   <h1 align="center">Axiom.</h1>
   <h3>Premium Full-Stack Project & Task Management</h3>
+  <br />
 </div>
 
 ## 🌐 Live Deployments
-- **Frontend (Vercel):** [https://axiom-app-snowy.vercel.app](https://axiom-app-snowy.vercel.app)
-- **Backend API (Render):** [https://axiom-app-oqzb.onrender.com/api/health](https://axiom-app-oqzb.onrender.com/api/health)
+- **Frontend App:** [https://axiom-app-snowy.vercel.app](https://axiom-app-snowy.vercel.app)
+- **Backend API:** [https://axiom-app-oqzb.onrender.com/api/health](https://axiom-app-oqzb.onrender.com/api/health)
 
-*(Note: The backend is hosted on a free Render tier and may take 30-50 seconds to spin up on the first request if it has been asleep).*
+*(Note: The backend is hosted on a free Render tier. It may take ~30 seconds to wake up on the first request).*
 
 ---
 
 ## 🚀 Overview
-Axiom is a modern, responsive, full-stack web application designed for robust project and task management. It was specifically engineered to achieve a perfect **30/30 score** against the Full-Stack Application Assessment Rubric, heavily prioritizing a premium UX/UI and a highly secure, relational backend.
+Axiom is a modern, full-stack web application built to streamline project and task management for teams. It features a highly responsive, custom-designed dark glassmorphism UI, coupled with a robust relational backend. From secure role-based access control to dynamic visual analytics, Axiom provides everything a team needs to track progress efficiently.
 
-## 🏆 Assessment Rubric Fulfillment
+## ✨ Key Features
 
-### 1. Frontend Evaluation (10/10)
-- **Authentication & User Flow:** Protected routes via React Router and React Context. Users cannot access dashboards without a valid JWT token.
-- **Project & Task Management UI:** Dynamic Kanban-style Task Board and an intuitive Project Grid creation flow.
-- **Dashboard & Data Presentation:** Aggregated analytics dynamically visualized using `chart.js` and `react-chartjs-2`.
-- **Validations, Error & Loading States:** Graceful handling of backend `400` errors, dedicated loading spinners, and tailored empty states (e.g., "No projects found").
-- **Code Quality & Responsiveness:** Clean functional components, CSS Flex/Grid architecture, and fully mobile-responsive layouts utilizing custom media queries and hamburger menus.
+### Frontend Experience
+- **Secure Authentication:** Stateless JWT-based authentication flow with protected application routes.
+- **Kanban-style Task Board:** Visual interface for managing task lifecycles (To Do, In Progress, Done) seamlessly.
+- **Project Workspaces:** Dedicated grid layouts for creating and managing overarching projects.
+- **Analytics Dashboard:** Real-time data visualization utilizing `Chart.js` to track total and completed tasks across the workspace.
+- **Premium UI/UX:** Custom dark-theme aesthetics featuring animated mesh gradients, frosted glass panels, and snappy micro-animations. Fully responsive across mobile and desktop interfaces.
 
-### 2. Backend Evaluation (10/10)
-- **REST API Design & Coverage:** Clean `GET`, `POST`, `PUT`, `DELETE` routes for `/api/projects`, `/api/tasks`, and `/api/auth`.
-- **Authentication & Security:** Stateless authentication using JWT. Passwords are securely hashed via `bcryptjs`.
-- **Role-Based Access Control:** Custom `roleMiddleware` strictly enforcing roles (`ADMIN`, `MANAGER`, `MEMBER`). For example, Members cannot delete projects or create tasks; they can only update task statuses.
-- **Database Design & Relationships:** Designed using `Prisma ORM` over SQLite. Perfect relational mapping (Users ↔ Projects ↔ Tasks).
-- **Validation, Error Handling & Business Logic:** Centralized Express error handlers catch uncaught exceptions to prevent crashes. Pre-database validation layers ensure bad requests are rejected early.
-
-### 3. Visual Quality (10/10)
-- **Overall Professional Look:** Deep-space dark theme featuring heavy **Glassmorphism**, frosted panels (`backdrop-filter`), and animated breathing mesh gradients.
-- **Typography & Readability:** Employs the `Outfit` font with strategic weight hierarchies for a premium SaaS feel.
-- **Layout & Spacing:** Strict adherence to consistent CSS flex gaps (1.5rem) and balanced padding for breathing room.
-- **Colors & Consistency:** Strong aesthetic consistency using vibrant Indigo/Purple gradients with standardized status indicators (Success/Warning/Danger).
-- **Polish:** Micro-animations on hover (`transform: translateY`), custom scrollbars, gradient text utilities, and smooth page load fade-ins.
+### Backend Infrastructure
+- **RESTful Architecture:** Clean and scalable Express.js API handling standard CRUD operations for users, projects, and tasks.
+- **Role-Based Access Control (RBAC):** Granular permissions system ensuring only Admins and Managers can create or delete resources, while Members are restricted to status updates.
+- **Relational Database Design:** Built on SQLite using Prisma ORM for type-safe database queries and strict relational mapping.
+- **Robust Security & Validation:** Passwords are encrypted using `bcryptjs`. Global error handlers catch runtime exceptions, ensuring the server remains stable under bad payloads.
 
 ---
 
 ## 💻 Tech Stack
-- **Frontend:** React 18, Vite, React Router DOM, Axios, Chart.js, Lucide Icons, Pure CSS (No Tailwind used, demonstrating pure styling capability).
+- **Frontend:** React 18, Vite, React Router DOM, Axios, Chart.js, Lucide Icons, Vanilla CSS.
 - **Backend:** Node.js, Express.js, JSONWebToken (JWT), Bcrypt.js.
 - **Database:** Prisma ORM, SQLite.
 
 ---
 
 ## 🛠️ Local Development Setup
+
+If you want to run Axiom locally on your own machine:
 
 1. **Clone the repository:**
    ```bash
