@@ -30,11 +30,11 @@ const Login = () => {
 
   return (
     <div style={{ display: 'flex', minHeight: '100vh', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
-      <div className="glass-panel animate-fade-in" style={{ width: '100%', maxWidth: '400px', padding: '3rem 2.5rem', backgroundColor: '#FFFFFF' }}>
+      <div className="glass-panel animate-fade-in" style={{ width: '100%', maxWidth: '400px', padding: '3rem 2.5rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '0.5rem', letterSpacing: '-0.05em', color: 'var(--primary-color)' }}>Axiom.</h1>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 700, marginBottom: '0.5rem', letterSpacing: '-0.05em', color: 'var(--primary-color)' }}>AXIOM</h1>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
-            {isLogin ? 'Sign in to continue your journey' : 'Create a new workspace'}
+            {isLogin ? 'Sign in to your terminal' : 'Initialize new workspace'}
           </p>
         </div>
 

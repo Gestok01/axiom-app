@@ -1,20 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg-color: #F8FAFC; /* Very light cool blue-gray */
-  --surface-color: #FFFFFF;
-  --surface-hover: #F1F5F9;
-  --primary-color: #0F172A; /* Slate 900 - Almost Black */
-  --accent-color: #2563EB; /* Bright Blue */
-  --text-primary: #0F172A;
-  --text-secondary: #64748B;
-  --border-color: #E2E8F0;
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
-  --success: #10B981;
-  --warning: #F59E0B;
-  --danger: #EF4444;
+  --bg-color: #000000; /* Pure Black */
+  --surface-color: #0A0A0A; /* Neutral 950 */
+  --surface-hover: #171717; /* Neutral 900 */
+  --primary-color: #FFFFFF; /* Pure White */
+  --primary-text: #000000; /* Black text on white buttons */
+  --accent-color: #A3E635; /* Trendy Neon Lime */
+  --text-primary: #FAFAFA;
+  --text-secondary: #A3A3A3;
+  --border-color: #262626;
+  --success: #4ADE80;
+  --warning: #FBBF24;
+  --danger: #F87171;
 }
 
 * {
@@ -24,103 +22,101 @@
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  background-image: radial-gradient(#E2E8F0 1px, transparent 1px);
-  background-size: 24px 24px;
+  /* Extremely subtle dark grid */
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-primary);
-  letter-spacing: -0.03em;
-}
-
-.text-gradient {
-  background: none;
-  color: var(--primary-color);
+  letter-spacing: -0.04em;
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--text-primary);
   text-decoration: none;
   transition: all 0.2s ease;
+  border-bottom: 1px solid transparent;
 }
 
 a:hover {
-  color: #1D4ED8;
+  color: var(--accent-color);
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.6rem 1.25rem;
-  border-radius: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px; /* Sharp corners */
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
-  border: none;
-  font-family: 'Manrope', sans-serif;
-  letter-spacing: -0.01em;
+  border: 1px solid transparent;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 0.02em;
 }
 
 .btn-primary {
   background-color: var(--primary-color);
-  color: #FFFFFF;
-  box-shadow: var(--shadow-sm);
+  color: var(--primary-text);
 }
 
 .btn-primary:hover {
-  background-color: #1E293B;
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  background-color: var(--surface-hover);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 .btn-outline {
-  background-color: #FFFFFF;
+  background-color: transparent;
   border: 1px solid var(--border-color);
   color: var(--text-primary);
 }
 
 .btn-outline:hover {
   background-color: var(--surface-hover);
+  border-color: var(--text-secondary);
 }
 
 .glass-panel {
   background: var(--surface-color);
   border: 1px solid var(--border-color);
-  border-radius: 1rem;
-  box-shadow: var(--shadow-sm);
-  transition: all 0.3s ease;
+  border-radius: 8px;
+  box-shadow: none;
+  transition: all 0.2s ease;
 }
 
 .glass-panel:hover {
-  box-shadow: var(--shadow-lg);
-  border-color: #CBD5E1;
+  border-color: #404040; /* Neutral 700 */
 }
 
 .input-field {
   width: 100%;
-  padding: 0.75rem 1rem;
-  background-color: #FFFFFF;
+  padding: 0.6rem 1rem;
+  background-color: var(--bg-color);
   border: 1px solid var(--border-color);
-  border-radius: 0.5rem;
+  border-radius: 4px;
   color: var(--text-primary);
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 0.95rem;
   transition: all 0.2s ease;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
 }
 
 .input-field:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 1px var(--accent-color);
 }
 
 /* Form Styles */
@@ -131,38 +127,40 @@ a:hover {
 .form-label {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 600;
+  font-size: 0.85rem;
+  font-weight: 500;
   color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* Animations */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(15px); }
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in {
-  animation: fadeInUp 0.4s ease-out forwards;
+  animation: slideUpFade 0.3s ease-out forwards;
 }
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--bg-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
-  border-radius: 10px;
+  background: var(--border-color);
+  border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #94A3B8;
+  background: var(--text-secondary);
 }
 
 /* Layout Utilities */
@@ -176,10 +174,7 @@ a:hover {
   margin: 1rem;
   display: flex;
   flex-direction: column;
-  background: #FFFFFF;
-  border: 1px solid var(--border-color);
-  border-radius: 1rem;
-  box-shadow: var(--shadow-sm);
+  background: var(--surface-color);
 }
 
 .main-content {
@@ -197,13 +192,12 @@ a:hover {
   top: 1.5rem;
   right: 1.5rem;
   z-index: 100;
-  background: #FFFFFF;
+  background: var(--surface-color);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
   padding: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 4px;
   cursor: pointer;
-  box-shadow: var(--shadow-md);
 }
 
 @media (max-width: 768px) {
@@ -220,6 +214,6 @@ a:hover {
 }
 
 ::selection {
-  background-color: rgba(37, 99, 235, 0.2);
-  color: var(--primary-color);
+  background-color: var(--accent-color);
+  color: #000000;
 }

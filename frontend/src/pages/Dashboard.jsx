@@ -64,11 +64,11 @@ const Dashboard = () => {
   const chartOptions = {
     responsive: true,
     plugins: {
-      legend: { position: 'top', labels: { color: '#0F172A', font: { family: 'Manrope', weight: 'bold' } } },
+      legend: { position: 'top', labels: { color: '#FAFAFA', font: { family: 'Space Grotesk' } } },
     },
     scales: {
-      y: { ticks: { color: '#64748B' }, grid: { color: '#E2E8F0' } },
-      x: { ticks: { color: '#64748B' }, grid: { display: false } }
+      y: { ticks: { color: '#A3A3A3' }, grid: { color: '#262626' } },
+      x: { ticks: { color: '#A3A3A3' }, grid: { display: false } }
     }
   };
 

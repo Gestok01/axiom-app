@@ -82,27 +82,27 @@ const Tasks = () => {
 
       <div style={{ display: 'flex', gap: '1.5rem', flex: 1, minHeight: 0, overflowX: 'auto', paddingBottom: '1rem' }}>
         {columns.map(col => (
-          <div key={col.id} className="glass-panel" style={{ flex: '1', minWidth: '320px', display: 'flex', flexDirection: 'column', backgroundColor: '#F8FAFC', borderTop: `4px solid ${col.color}` }}>
-            <div style={{ padding: '1.25rem 1.5rem', borderBottom: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <div style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: col.color }}></div>
-              <h3 style={{ fontSize: '1.1rem', fontWeight: 600, letterSpacing: '0.02em' }}>{col.title}</h3>
-              <span style={{ marginLeft: 'auto', backgroundColor: '#E2E8F0', padding: '0.125rem 0.6rem', borderRadius: '1rem', fontSize: '0.75rem', color: 'var(--text-primary)', fontWeight: 600 }}>
+          <div key={col.id} className="glass-panel" style={{ flex: '1', minWidth: '320px', display: 'flex', flexDirection: 'column', backgroundColor: 'var(--surface-color)', borderTop: `2px solid ${col.color}` }}>
+            <div style={{ padding: '1rem 1.5rem', borderBottom: '1px solid var(--border-color)', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <div style={{ width: '8px', height: '8px', backgroundColor: col.color }}></div>
+              <h3 style={{ fontSize: '1rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>{col.title}</h3>
+              <span style={{ marginLeft: 'auto', backgroundColor: 'var(--border-color)', padding: '0.125rem 0.6rem', borderRadius: '4px', fontSize: '0.75rem', color: 'var(--text-primary)', fontWeight: 600 }}>
                 {tasks.filter(t => t.status === col.id).length}
               </span>
             </div>
             
             <div style={{ padding: '1.25rem', flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               {tasks.filter(t => t.status === col.id).map(task => (
-                <div key={task.id} className="glass-panel" style={{ padding: '1.25rem', backgroundColor: '#FFFFFF', transition: 'all 0.2s', cursor: 'pointer' }} onMouseEnter={(e) => {e.currentTarget.style.transform = 'translateY(-2px)'}} onMouseLeave={(e) => {e.currentTarget.style.transform = 'translateY(0)'}}>
-                  <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--accent-color)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{task.project?.name}</div>
-                  <h4 style={{ marginBottom: '0.5rem', fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-primary)' }}>{task.title}</h4>
-                  <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', marginBottom: '1.25rem', lineHeight: '1.5' }}>{task.description}</p>
+                <div key={task.id} className="glass-panel" style={{ padding: '1.25rem', backgroundColor: 'var(--bg-color)', transition: 'all 0.2s', cursor: 'pointer' }}>
+                  <div style={{ fontSize: '0.7rem', fontWeight: 700, color: 'var(--accent-color)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{task.project?.name}</div>
+                  <h4 style={{ marginBottom: '0.5rem', fontSize: '1.05rem', fontWeight: 600, color: 'var(--text-primary)' }}>{task.title}</h4>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '1.25rem', lineHeight: '1.5' }}>{task.description}</p>
                   
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <select 
                       value={task.status} 
                       onChange={(e) => handleStatusChange(task.id, e.target.value)}
-                      style={{ backgroundColor: '#F1F5F9', border: '1px solid var(--border-color)', color: 'var(--text-primary)', borderRadius: '0.375rem', padding: '0.4rem 0.5rem', fontSize: '0.8rem', fontFamily: 'Manrope', fontWeight: 600, cursor: 'pointer' }}
+                      style={{ backgroundColor: 'var(--surface-hover)', border: '1px solid var(--border-color)', color: 'var(--text-primary)', borderRadius: '4px', padding: '0.4rem 0.5rem', fontSize: '0.8rem', fontFamily: 'Space Grotesk', fontWeight: 600, cursor: 'pointer' }}
                     >
                       <option value="TODO">To Do</option>
                       <option value="IN_PROGRESS">In Progress</option>
