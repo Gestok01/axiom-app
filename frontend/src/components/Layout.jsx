@@ -26,7 +26,7 @@ const Layout = () => {
       <aside className={`glass-panel sidebar ${mobileOpen ? 'open' : ''}`}>
         <div style={{ padding: '2rem 1.5rem', borderBottom: '1px solid var(--border-color)' }}>
           <h2 style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-            <span className="text-gradient" style={{ fontSize: '1.75rem', fontWeight: 800, letterSpacing: '-0.05em' }}>Axiom.</span>
+            <span style={{ fontSize: '1.75rem', fontWeight: 800, letterSpacing: '-0.05em', color: 'var(--primary-color)' }}>Axiom.</span>
           </h2>
         </div>
         
